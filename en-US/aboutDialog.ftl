@@ -2,7 +2,7 @@ brandShortName = Firefox
 vendorShortName = Mozilla
 trademarkInfo-part1 = ""
 
-aboutDialog-title =
+aboutDialog-title = ""
   [html/title] About Firefox
 
 aboutDialog-releaseNotes-link = What's new
