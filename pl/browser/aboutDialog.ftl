@@ -5,7 +5,7 @@ aboutDialog-releaseNotes-link = Informacje o wydaniu
 
 aboutDialog-channel-description = Obecnie korzystasz z kanału aktualizacji <label>{ $channelName }</label>.
 
-aboutDialog-update-checkForUpdatesButton = Sprawdź dostępność aktualizacji (FTL)
+aboutDialog-update-checkForUpdatesButton = Sprawdź dostępność aktualizacji
   [html/accesskey] S
 aboutDialog-update-updateButton = Uruchom ponownie, aby uaktualnić
   [html/accesskey] U

@@ -3,4 +3,4 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 tabs-empty-tab-title =
-  [label] Nowa karta (FTL)
+  [label] Nowa karta

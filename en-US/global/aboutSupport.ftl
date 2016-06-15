@@ -1,8 +1,5 @@
 # This file is used to localize about:support in Firefox.
 
-# Firefox, as a brand name, should not be localized or transliterated.
-brandShortName = Firefox
-
 aboutSupport-pageTitle = Troubleshooting Information
 
 # Don’t translate “supportLink”, it’s an ID used for CSS.
@@ -12,16 +9,13 @@ aboutSupport-pageSubtitle =
   | trying to solve a problem. If you are looking for answers to common questions
   | about { brandShortName } check out our <a id="supportLink">support website</a>.
 
-refreshProfile-dialog-title = Give { brandShortName } a tune up
-refreshProfile-button = Refresh { brandShortName}…
-
 aboutSupport-safeModeTitle = Try Safe Mode
 # This string is used as a button label. Be aware of length issues compared to
 # the section title.
 aboutSupport-restartInSafeMode = Restart with Add-ons Disabled…
 
 aboutSupport-copyRawDataToClipboard = Copy raw data to clipboard
-aboutSupport-rawDatCopied = Raw data copied to clipboard
+aboutSupport-rawDataCopied = Raw data copied to clipboard
 
 aboutSupport-copyTextToClipboard = Copy text to clipboard
 aboutSupport-textCopied = Text copied to clipboard
@@ -60,6 +54,7 @@ aboutSupport-showDir = { OS() ->
 aboutSupport-appBasicsEnabledPlugins = Enabled Plugins
 aboutSupport-appBasicsBuildConfig = Build Configuration
 aboutSupport-appBasicsMemoryUse = Memory Use
+aboutSupport-appBasicsPerformance = Performance
 aboutSupport-appBasicsServiceWorkers = Registered Service Workers
 aboutSupport-appBasicsMultiProcessSupport = Multiprocess Windows
 aboutSupport-appBasicsSafeMode = Safe Mode
@@ -72,7 +67,7 @@ aboutSupport-appBasicsProfiles = Profiles
 # $total (Number)  - Total number of open windows
 # $status (Number) - Code of the status of e10s in the browser. Used to select description part of the string.
 # Example output: “2/2 (Enabled by default)”
-aboutSupport-multiProcessWindows = { $remote }/{ $total } ({ $status ->
+aboutSupport-multiProcessWindows = { $remote }/{ $total } ({ $statusCode ->
   [0] Enabled by user
   [1] Enabled by default
   [2] Disabled
@@ -82,6 +77,7 @@ aboutSupport-multiProcessWindows = { $remote }/{ $total } ({ $status ->
   [7] Disabled by add-ons
   [8] Disabled forcibly
   [9] Disabled by graphics hardware acceleration on Windows
+  [10] { $system }
  *[other] Unknown status
 })
 
@@ -119,6 +115,7 @@ aboutSupport-graphicsFailureLogTitle = Failure Log
 aboutSupport-graphicsGPU1Title = GPU #1
 aboutSupport-graphicsGPU2Title = GPU #2
 aboutSupport-graphicsDecisionLogTitle = Decision Log
+aboutSupport-graphicsCrashGuardsTitle = Crash Guard Disabled Features
 aboutSupport-graphicsWorkaroundsTitle = Workarounds
 aboutSupport-graphics-apzNone = none
 aboutSupport-graphics-wheelEnabled = wheel input enabled
@@ -144,6 +141,11 @@ aboutSupport-graphics-gpuRAM = RAM
 aboutSupport-graphics-webglRenderer = WebGL Renderer
 aboutSupport-blocklistedBug = Blocklisted due to known issues; <a>bug { $bugNumber }</a>
 aboutSupport-unknownFailure = Blocklisted; failure code { $code }
+aboutSupport-d3d11layersCrashGuard = D3D11 Compositor
+aboutSupport-d3d11videoCrashGuard = D3D11 Video Decoder
+aboutSupport-d3d9videoCrashGuard = D3D9 Video Decoder
+aboutSupport-glcontextCrashGuard = OpenGL
+aboutSupport-resetOnNextRestart = Reset on Next Restart
 
 aboutSupport-modifiedKeyPrefsTitle = Important Modified Preferences
 aboutSupport-modifiedPrefsName = Name
@@ -190,4 +192,3 @@ aboutSupport-hasUserNamespaces = User Namespaces
 aboutSupport-hasPrivilegedUserNamespaces = User Namespaces for privileged processes
 aboutSupport-canSandboxContent = Content Process Sandboxing
 aboutSupport-canSandboxMedia = Media Plugin Sandboxing
-
