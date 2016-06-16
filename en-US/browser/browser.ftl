@@ -5,3 +5,5 @@
 urlbar =
   [placeholder] Search or enter address
   [accesskey]   d
+
+browser-crashed = { brandShortName } crashed
