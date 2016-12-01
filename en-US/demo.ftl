@@ -25,3 +25,8 @@ delete-all-message = { $num ->
    *[other] Delete { $num } downloads?
 }
 
+# General selector
+crashed = { brand-name[gender] ->
+ *[masculine] { brand-name } uległ awarii.
+  [feminine]  { brand-name } uległa awarii.
+}
