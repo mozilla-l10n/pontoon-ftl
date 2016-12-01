@@ -1,7 +1,7 @@
 # Simple string
 title = About Localization
 
-# Multiline string
+# Multiline string: press Shift + Enter to insert new line
 feedbackUninstallCopy =
     | Your participation in Firefox Test Pilot means
     | a lot! Please check out our other experiments,
