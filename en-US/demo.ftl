@@ -24,6 +24,3 @@ delete-all-message = { $num ->
     [1]     Delete this download?
    *[other] Delete { $num } downloads?
 }
-
-# General selector (translation only)
-crashed = { brand-name } crashed.
