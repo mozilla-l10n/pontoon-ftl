@@ -1,13 +1,16 @@
 title = O lokalizaciji
-feedbackUninstallCopy = 
-  | Your participation in Firefox Test Pilot means
-  | a lot! Please check out our other experiments,
-  | and stay tuned for more to come!
+feedbackUninstallCopy = saldjslakjasldasda
 emailOptInInput = 
-  [html/placeholder] vaš e-poštni naslov :)
+  [html/placeholder] dlkjasldjlasdjlasdj
 brand-short-name = 
-  [nominative] Firefox
-  [locative] Firefoxu
+  [sadas] dasdasdsda
+  [dasasddasas] dasadas
 file-menu = 
-  [xul/label] Datoteka
-  [xul/accesskey] D
+  [xul/label] adsdadasdas
+  [xul/accesskey] A
+delete-all-message = { $num ->
+  [one] asdas
+  [two] asdasdasdasd
+  [few] asdasdas
+  [other] dasdadsasdas
+}
