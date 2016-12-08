@@ -26,14 +26,14 @@ delete-all-message = { $num ->
 }
 
 # Simple selector
-prefs = { PLATFORM() ->
+selector = { PLATFORM() ->
     [mac]   Preferences
     [linux] Options
     [win]   Settings
 }
 
 # Multiple selectors
-key = There { $num ->
+selector-multi = There { $num ->
     [one] is one email
    *[other] are many emails
 } for { $gender ->
@@ -42,7 +42,7 @@ key = There { $num ->
 }
 
 # Nested selectors
-key2 = { $gender ->
+selector-nested = { $gender ->
    *[masculine] { $num ->
        [one] There is one email for her
       *[other] There are many emails for her
