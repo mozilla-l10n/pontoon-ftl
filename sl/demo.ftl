@@ -3,11 +3,11 @@ feedbackUninstallCopy = saldjslakjasldasda
 emailOptInInput = 
   [html/placeholder] dlkjasldjlasdjlasdj
 brand-short-name = 
-  [sadas] dasdasdsda
   [dasasddasas] dasadas
+  [asdadasd] asdasasas
 file-menu = 
-  [xul/label] adsdadasdas
-  [xul/accesskey] A
+  [xul/label] adsdadasdasdsfsfs
+  [xul/accesskey] F
 delete-all-message = { $num ->
   [one] asdas
   [two] asdasdasdasd
