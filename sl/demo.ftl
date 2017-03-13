@@ -5,9 +5,10 @@ feedbackUninstallCopy = saldjslakjasldasda
 emailOptInInput
     .placeholder = dlkjasldjlasdjlasdj
 
-brand-short-name =
-    [dasasddasas] dasadas
-    [asdadasd] asdasasas
+brand-short-name = {
+        *[dasasddasas] dasadas
+        [asdadasd] asdasasas
+    }
 
 file-menu
     .label = adsdadasdasdsfsfs
@@ -18,5 +19,5 @@ delete-all-message =
         [one] asdas
         [two] asdasdasdasd
         [few] asdasdas
-        [other] dasdadsasdas
+        *[other] dasdadsasdas
     }
