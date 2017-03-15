@@ -7,11 +7,11 @@ feedbackUninstallCopy =
     a lot! Please check out our other experiments,
     and stay tuned for more to come!
 
-// Attributes
+// Attributes: in original string
 emailOptInInput
     .placeholder = email goes here :)
 
-// Tags
+// Attributes: in translation
 brand-short-name = Firefox
     #masculine
 
