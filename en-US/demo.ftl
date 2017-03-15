@@ -11,10 +11,6 @@ feedbackUninstallCopy =
 emailOptInInput
     .placeholder = email goes here :)
 
-// Attributes: in translation
-brand-short-name = Firefox
-    #masculine
-
 // Attributes: access keys
 file-menu
     .label = File
@@ -26,6 +22,13 @@ delete-all-message =
         [1] Delete this download?
        *[other] Delete { $num } downloads?
     }
+
+// Tags
+// brand-short-name = Firefox
+//    #masculine
+
+// Variants: in translation
+// brand-name = Aurora
 
 // Simple selector
 // selector =
