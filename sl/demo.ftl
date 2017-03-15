@@ -5,14 +5,14 @@ feedbackUninstallCopy = saldjslakjasldasda
 emailOptInInput
     .placeholder = dlkjasldjlasdjlasdj
 
+file-menu
+    .label = adsdadasdasdsfsfs
+    .accesskey = F
+
 brand-short-name = {
         *[dasasddasas] dasadas
         [asdadasd] asdasasas
     }
-
-file-menu
-    .label = adsdadasdasdsfsfs
-    .accesskey = F
 
 delete-all-message =
     { $num ->
