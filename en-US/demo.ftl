@@ -17,11 +17,11 @@ file-menu
     .accesskey = F
 
 // Plurals
-// delete-all-message =
-//     { $num ->
-//         [1] Delete this download?
-//        *[other] Delete { $num } downloads?
-//     }
+delete-all-message =
+    { $num ->
+        [1] Delete this download?
+       *[other] Delete { $num } downloads?
+    }
 
 // Tags
 // brand-short-name = Firefox
