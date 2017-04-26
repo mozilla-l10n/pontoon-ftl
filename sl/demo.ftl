@@ -1,14 +1,21 @@
 title = O lokalizaciji
+
 // Tags
 // brand-short-name = Firefox
-//    #masculine// Variants: in translation
-// brand-name = Aurora// Simple selector
+//    #masculine
+
+// Variants: in translation
+// brand-name = Aurora
+
+// Simple selector
 // selector =
 //    { PLATFORM() ->
 //        [mac] Preferences
 //        [linux] Options
 //       *[win] Settings
-//    }// Multiple selectors
+//    }
+
+// Multiple selectors
 // selector-multi =
 //    There { $num ->
 //        [one] is one email
@@ -16,7 +23,9 @@ title = O lokalizaciji
 //    } for { $gender ->
 //       *[masculine] him
 //        [feminie] her
-//    }// Nested selectors
+//    }
+
+// Nested selectors
 // selector-nested =
 //    { $gender ->
 //       *[masculine] { $num ->
