@@ -23,6 +23,11 @@ delete-all-message =
        *[other] Delete { $num } downloads?
     }
 
+// Functions
+warning-upgrade =
+    { LINK("Upgrade Firefox", title: "New version of Firefox is available!") }
+    to get started.
+    
 // Tags
 // brand-short-name = Firefox
 //    #masculine
