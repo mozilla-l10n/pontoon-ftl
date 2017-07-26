@@ -1,3 +1,24 @@
+// Simple string
+title = O lokalizaciji
+// Multiline string: press Shift + Enter to insert new line
+feedbackUninstallCopy =
+    1Your participation in Firefox Test Pilot means
+    2a lot! Please check out our other experiments,
+    3and stay tuned for more to come!
+// Attributes: in original string
+emailOptInInput
+    .placeholder = asadas :
+// Attributes: access keys
+file-menu
+    .label = assadasasds
+    .accesskey = A
+// Plurals
+delete-all-message = { $num ->
+        [one] asda
+        [two] dasdas
+        [few] adsasd
+       *[other] adsdas
+    }
 // Tags
 // brand-short-name = Firefox
 //    #masculine// Variants: in translation
