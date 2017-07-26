@@ -1,24 +1,3 @@
-// Simple string
-title = O lokalizaciji
-// Multiline string: press Shift + Enter to insert new line
-feedbackUninstallCopy =
-    dasdasdasdasadadsadasa
-    dasdasdasdasdasdas
-    asdasdadsdaasdsa
-// Attributes: in original string
-emailOptInInput
-    .placeholder = tukaj pride e-pošta :)
-// Attributes: access keys
-file-menu
-    .label = Datoteka
-    .accesskey = D
-// Plurals
-delete-all-message = { $num ->
-        [one] Izbrišpem ta prenos?
-        [two] Izbrišpem ta { $num } prenosa?
-        [few] Izbrišpem te { $num } prenose?
-       *[other] Izbrišpem teh { $num } prenosov?
-    }
 // Tags
 // brand-short-name = Firefox
 //    #masculine// Variants: in translation
