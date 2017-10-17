@@ -24,9 +24,9 @@ delete-all-message =
     }
 
 // Functions
-warning-upgrade =
-    { LINK("Upgrade Firefox", title: "New version of Firefox is available!") }
-    to get started.
+// warning-upgrade =
+//   { LINK("Upgrade Firefox", title: "New version of Firefox is available!") }
+//    to get started.
     
 // Tags
 // brand-short-name = Firefox
