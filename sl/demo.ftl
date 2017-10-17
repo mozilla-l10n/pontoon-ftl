@@ -1,5 +1,3 @@
-// Simple string
-title = O lokalizaciji
 // Multiline string: press Shift + Enter to insert new line
 feedbackUninstallCopy =
     1Your participation in Firefox Test Pilot means
@@ -7,11 +5,7 @@ feedbackUninstallCopy =
     3and stay tuned for more to come!
 // Attributes: in original string
 emailOptInInput
-    .placeholder = asadas :
-// Attributes: access keys
-file-menu
-    .label = assadasasds
-    .accesskey = A
+    .placeholder = asadas :2ee2
 // Plurals
 delete-all-message = { $num ->
         [one] asda
@@ -19,16 +13,32 @@ delete-all-message = { $num ->
         [few] adsasd
        *[other] adsdas
     }
+
+// Functions
+// warning-upgrade =
+//   { LINK("Upgrade Firefox", title: "New version of Firefox is available!") }
+//    to get started.
+
+
 // Tags
 // brand-short-name = Firefox
-//    #masculine// Variants: in translation
-// brand-name = Aurora// Simple selector
+//    #masculine
+
+
+// Variants: in translation
+// brand-name = Aurora
+
+
+// Simple selector
 // selector =
 //    { PLATFORM() ->
 //        [mac] Preferences
 //        [linux] Options
 //       *[win] Settings
-//    }// Multiple selectors
+//    }
+
+
+// Multiple selectors
 // selector-multi =
 //    There { $num ->
 //        [one] is one email
@@ -36,7 +46,10 @@ delete-all-message = { $num ->
 //    } for { $gender ->
 //       *[masculine] him
 //        [feminie] her
-//    }// Nested selectors
+//    }
+
+
+// Nested selectors
 // selector-nested =
 //    { $gender ->
 //       *[masculine] { $num ->
@@ -48,3 +61,4 @@ delete-all-message = { $num ->
 //           *[other] There are many emails for him
 //        }
 //    }
+
