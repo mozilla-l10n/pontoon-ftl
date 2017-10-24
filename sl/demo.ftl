@@ -15,9 +15,9 @@ delete-all-message = { $num ->
     }
 
 // Functions
-// warning-upgrade =
-//   { LINK("Upgrade Firefox", title: "New version of Firefox is available!") }
-//    to get started.
+warning-upgrade =
+  { LINK("Nadgradite Firefox", title: "Nova različica Firefoxa je na voljo!") }
+  to get started.
 
 
 // Tags
