@@ -1,10 +1,3 @@
-dnt-description = Send websites a “Do Not Track” signal that you don’t want to be tracked
-dnt-learn-more = Learn more
-dnt-default
-    .label = Only when using Tracking Protection
-dnt-always
-    .label = Always
-
 // Simple string
 title = About Localization
 
