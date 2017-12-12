@@ -27,7 +27,11 @@ delete-all-message =
 warning-upgrade =
   { LINK("Upgrade Firefox", title: "New version of Firefox is available!") }
   to get started.
-    
+
+// Soft Launch
+default-content-process-count
+    .label = { $num } (default)
+
 // Tags
 // brand-short-name = Firefox
 //    #masculine
