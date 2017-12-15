@@ -1,3 +1,5 @@
+// Simple string
+title = O lokalizaciji12saasdasdasd3asd
 // Multiline string: press Shift + Enter to insert new line
 feedbackUninstallCopy =
     1Your participation in Firefox Test Pilot means
@@ -6,6 +8,10 @@ feedbackUninstallCopy =
 // Attributes: in original string
 emailOptInInput
     .placeholder = asadas :2ee2
+// Attributes: access keys
+file-menu
+    .label = Datotekaasd
+    .accesskey = D
 // Plurals
 delete-all-message = { $num ->
         [one] asda
@@ -13,12 +19,13 @@ delete-all-message = { $num ->
         [few] adsasd
        *[other] adsdas
     }
-
 // Functions
 warning-upgrade =
-  { LINK("Nadgradite Firefox", title: "Nova različica Firefoxa je na voljo!") }
-  za začetek.
-
+    { LINK("Nadgradite Firefox", title: "Nova različica Firefoxa je na voljo!") }
+    za začetek.
+// Soft Launch
+default-content-process-count
+    .label = { $num } (default)
 
 // Tags
 // brand-short-name = Firefox
