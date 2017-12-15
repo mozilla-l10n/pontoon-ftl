@@ -1,31 +1,32 @@
 // Simple string
-title = O lokalizaciji12saasdasdasd3asd
+title = O lokalizaciji12saasdasdasd3asd123
 // Multiline string: press Shift + Enter to insert new line
 feedbackUninstallCopy =
     1Your participation in Firefox Test Pilot means
+    123Your participation in Firefox Test Pilot means
     2a lot! Please check out our other experiments,
     3and stay tuned for more to come!
 // Attributes: in original string
 emailOptInInput
-    .placeholder = asadas :2ee2
+    .placeholder = 123
 // Attributes: access keys
 file-menu
-    .label = Datotekaasd
-    .accesskey = D
+    .label = 123
+    .accesskey = 1
 // Plurals
 delete-all-message = { $num ->
-        [one] asda
+        [one] asda123
         [two] dasdas
         [few] adsasd
        *[other] adsdas
     }
 // Functions
 warning-upgrade =
-    { LINK("Nadgradite Firefox", title: "Nova različica Firefoxa je na voljo!") }
+    { LINK("Nadgradite123 Firefox123", title: "Nova različica Firefoxa je na voljo123!") }
     za začetek.
 // Soft Launch
 default-content-process-count
-    .label = { $num } (default)
+    .label = { $num } (123default)
 
 // Tags
 // brand-short-name = Firefox
