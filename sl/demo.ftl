@@ -1,5 +1,9 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
 // Simple string
-title = O lokalizaciji12saasdasdasd3asd+++
+title = O lokalizaciji12saasdasdasd3asd***
 // Multiline string: press Shift + Enter to insert new line
 feedbackUninstallCopy =
     1Your participation in Firefox Test Pilot means
