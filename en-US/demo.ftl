@@ -18,7 +18,7 @@ file-menu
 
 // Value and an attribute
 shotIndexNoExpirationSymbol = ∞
-.title = This shot does not expire
+    .title = This shot does not expire
 
 // Plurals
 delete-all-message =
