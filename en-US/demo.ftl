@@ -16,6 +16,10 @@ file-menu
     .label = File
     .accesskey = F
 
+// Value and an attribute
+shotIndexNoExpirationSymbol = ∞
+.title = This shot does not expire
+
 // Plurals
 delete-all-message =
     { $num ->
