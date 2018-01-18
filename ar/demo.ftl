@@ -1,18 +1,34 @@
+// Simple string
+title = O lokalizaciji
+// Multiline string: press Shift + Enter to insert new line
+feedbackUninstallCopy =
+    ssadadas
+    fwfwefewfjwehk
+    kjfklwjflwejfewf
+// Attributes: in original string
+emailOptInInput
+    .placeholder = qkjdlqjwdlqw :)
 // Attributes: access keys
 file-menu
-    .label = Datot4k
-    .accesskey = 4
-
+    .label = wqdqdwdq2123Datot4k
+    .accesskey = 1
+// Value and an attribute
+shotIndexNoExpirationSymbol = ∞
+    .title = This shot does not expire
+// Plurals
+delete-all-message = { $num ->
+        [zero] addqwd
+        [one] qwdwqwq
+        [two] dqwdq
+        [few] qwdwq
+        [many] dqwdw
+       *[other] qwdqwdqw
+    }
 // Functions
-// warning-upgrade =
-//   { LINK("Upgrade Firefox", title: "New version of Firefox is available!") }
-//    to get started.
-
-
-// Tags
-// brand-short-name = Firefox
-//    #masculine
-
+warning-upgrade = { LINK("Upgrade Firefox", title: "New version of Firefox is available!") } to get started.
+// Soft Launch
+default-content-process-count
+    .label = { $num } (default)
 
 // Variants: in translation
 // brand-name = Aurora
