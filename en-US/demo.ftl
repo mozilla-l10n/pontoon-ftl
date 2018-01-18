@@ -36,6 +36,19 @@ warning-upgrade =
 default-content-process-count
     .label = { $num } (default)
 
+// PLATFORM() selector
+platform = { PLATFORM() ->
+    [win] Options
+   *[other] Preferences
+}
+
+// PLATFORM() selector in attribute
+platform-attribute
+    .title = { PLATFORM() ->
+        [win] Options
+       *[other] Preferences
+    }
+
 // Variants: in translation
 // brand-name = Aurora
 
