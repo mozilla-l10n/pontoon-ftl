@@ -50,17 +50,6 @@ platform-attribute
        *[other] Preferences
     }
 
-// Variants: in translation
-// brand-name = Aurora
-
-// Simple selector
-// selector =
-//    { PLATFORM() ->
-//        [mac] Preferences
-//        [linux] Options
-//       *[win] Settings
-//    }
-
 // Multiple selectors
 // selector-multi =
 //    There { $num ->
