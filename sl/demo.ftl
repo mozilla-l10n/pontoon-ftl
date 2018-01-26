@@ -11,8 +11,8 @@ emailOptInInput
     .placeholder = 123---
 // Attributes: access keys
 file-menu
-    .label = 123+-+-+-
-    .accesskey = Đ
+    .label = Datoteka
+    .accesskey = D
 // Value and an attribute
 shotIndexNoExpirationSymbol = ∞
     .title = Ta posnetek ne poteče
@@ -24,25 +24,21 @@ delete-all-message = { $num ->
        *[other] adsdas+++
     }
 // Functions
-warning-upgrade =
-    { LINK("NadgraditeŽŽŽ123 Firefox123", title: "Nova različica Firefoxa je na voljoŽŽŽ123!") }
-    za začetek+++.
+warning-upgrade = { LINK("Upgrade Firefox", title: "New version of Firefox is available!") } to get started.
 // Soft Launch
 default-content-process-count
     .label = { $num } (123+++default)
-
-// Variants: in translation
-// brand-name = Aurora
-
-
-// Simple selector
-// selector =
-//    { PLATFORM() ->
-//        [mac] Preferences
-//        [linux] Options
-//       *[win] Settings
-//    }
-
+// PLATFORM() selector
+platform = { PLATFORM() ->
+        [win] Možnosti
+       *[other] Nastavitve
+    }
+// PLATFORM() selector in attribute
+platform-attribute
+    .title = { PLATFORM() ->
+            [win] Options
+           *[other] Preferences
+        }
 
 // Multiple selectors
 // selector-multi =
