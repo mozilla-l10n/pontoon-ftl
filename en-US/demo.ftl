@@ -50,6 +50,19 @@ platform-attribute
        *[other] Preferences
     }
 
+// Double selector
+download-choose-folder =
+    .label =
+        { PLATFORM() ->
+            [macosx] Choose…
+           *[other] Browse…
+        }
+    .accesskey =
+        { PLATFORM() ->
+            [macosx] e
+           *[other] o
+        }
+
 // Multiple selectors
 // selector-multi =
 //    There { $num ->
