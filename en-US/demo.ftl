@@ -27,10 +27,8 @@ delete-all-message =
        *[other] Delete { $num } downloads?
     }
 
-// Functions
-warning-upgrade =
-  { LINK("Upgrade Firefox", title: "New version of Firefox is available!") }
-  to get started.
+// NUMBER Built-in function
+today-is = Today is { DATETIME($date, month: "long", year: "numeric", day: "numeric") }
 
 // Soft Launch
 default-content-process-count
