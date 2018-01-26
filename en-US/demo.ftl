@@ -48,8 +48,8 @@ platform-attribute
        *[other] Preferences
     }
 
-// Double selector
-download-choose-folder =
+// Double selector in attributes
+download-choose-folder
     .label =
         { PLATFORM() ->
             [macosx] Choose…
