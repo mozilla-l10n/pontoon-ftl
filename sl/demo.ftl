@@ -18,13 +18,11 @@ shotIndexNoExpirationSymbol = ∞
     .title = Ta posnetek ne poteče
 // Plurals
 delete-all-message = { $num ->
-        [one] #############a123+++
+        [1] #############a123+++
         [two] d#############as+++
         [few] ads#############+++
        *[other] adsdas+++
     }
-// Functions
-warning-upgrade = { LINK("Upgrade Firefox", title: "New version of Firefox is available!") } to get started.
 // Soft Launch
 default-content-process-count
     .label = { $num } (123+++default)
@@ -36,8 +34,8 @@ platform = { PLATFORM() ->
 // PLATFORM() selector in attribute
 platform-attribute
     .title = { PLATFORM() ->
-            [win] Options
-           *[other] Preferences
+            [win] Možnosti
+           *[other] Nastavitve
         }
 
 // Multiple selectors
