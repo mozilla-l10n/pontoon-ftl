@@ -25,7 +25,7 @@ delete-all-message = { $num ->
     }
 # Soft Launch
 default-content-process-count =
-    .label = { $num } (123+++default)
+    .label = { $num } (privzeto)
 # PLATFORM() selector
 platform = { PLATFORM() ->
         [win] Možnosti
@@ -36,6 +36,16 @@ platform-attribute =
     .title = { PLATFORM() ->
             [win] Možnosti
            *[other] Nastavitve
+        }
+# Double selector in attributes
+download-choose-folder =
+    .label = { PLATFORM() ->
+            [macosx] Izberi …
+           *[other] Brskaj …
+        }
+    .accesskey = { PLATFORM() ->
+            [macosx] e
+           *[other] r
         }
 
 # Multiple selectors
