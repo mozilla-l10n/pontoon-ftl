@@ -62,14 +62,14 @@ download-choose-folder
         }
 
 // Multiple selectors
-// selector-multi =
-//    There { $num ->
-//        [one] is one email
-//       *[other] are many emails
-//    } for { $gender ->
-//       *[masculine] him
-//        [feminie] her
-//    }
+selector-multi =
+   There { $num ->
+       [one] is one email
+      *[other] are many emails
+   } for { $gender ->
+      *[masculine] him
+       [feminie] her
+   }
 
 // Nested selectors
 // selector-nested =
