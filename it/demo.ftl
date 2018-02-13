@@ -19,6 +19,14 @@ download-choose-folder =
             [macosx] Sfoglia…
            *[other] o
         }
+# Multiple selectors
+selector-multi = { $num ->
+        [one] C'è un'email
+       *[other] Ci sono email
+    } per { $gender ->
+        [masculine] lui
+       *[feminine] lei
+    }
 
 # Nested selectors
 # selector-nested =
