@@ -1,31 +1,35 @@
-// PLATFORM() selector in attribute
-platform-attribute
+# Plurals
+delete-all-message = { $num ->
+        [one] Eliminare questo download?
+       *[other] Eliminare { $num } download?
+    }
+# PLATFORM() selector in attribute
+platform-attribute =
     .title = { PLATFORM() ->
-            [win] werwe
-           *[other] werwerwe
+            [win] Opzioni
+           *[other] Preferenze
+        }
+# Double selector in attributes
+download-choose-folder =
+    .label = { PLATFORM() ->
+            [macosx] Scegli…
+           *[other] e
+        }
+    .accesskey = { PLATFORM() ->
+            [macosx] Sfoglia…
+           *[other] o
         }
 
-// Multiple selectors
-// selector-multi =
-//    There { $num ->
-//        [one] is one email
-//       *[other] are many emails
-//    } for { $gender ->
-//       *[masculine] him
-//        [feminie] her
-//    }
-
-
-// Nested selectors
-// selector-nested =
-//    { $gender ->
-//       *[masculine] { $num ->
-//            [one] There is one email for her
-//           *[other] There are many emails for her
-//        }
-//        [feminine] { $num ->
-//            [one] There is one email for him
-//           *[other] There are many emails for him
-//        }
-//    }
+# Nested selectors
+# selector-nested =
+#    { $gender ->
+#       *[masculine] { $num ->
+#            [one] There is one email for her
+#           *[other] There are many emails for her
+#        }
+#        [feminine] { $num ->
+#            [one] There is one email for him
+#           *[other] There are many emails for him
+#        }
+#    }
 
