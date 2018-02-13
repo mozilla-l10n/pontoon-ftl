@@ -52,12 +52,12 @@ platform-attribute
 download-choose-folder
     .label =
         { PLATFORM() ->
-            [macosx] Choose…
+            [macos] Choose…
            *[other] Browse…
         }
     .accesskey =
         { PLATFORM() ->
-            [macosx] e
+            [macos] e
            *[other] o
         }
 
@@ -68,7 +68,7 @@ selector-multi =
       *[other] are many emails
    } for { $gender ->
       *[masculine] him
-       [feminie] her
+       [feminine] her
    }
 
 // Nested selectors
