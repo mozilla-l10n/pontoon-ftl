@@ -26,6 +26,14 @@ delete-all-message =
         [1] Delete this download?
        *[other] Delete { $num } downloads?
     }
+    
+delete-all-message-special-cases =
+    { $num ->
+        [1] Delete this download?
+        [2] Delete this pair of downloads?
+        [12] Delete this dozen of downloads?        
+       *[other] Delete { $num } downloads?
+    }
 
 // NUMBER Built-in function
 today-is = Today is { DATETIME($date, month: "long", year: "numeric", day: "numeric") }
