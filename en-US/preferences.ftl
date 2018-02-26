@@ -10,7 +10,8 @@ do-not-track-option-always =
     .label = Always
 
 pref-page =
-    .title = { PLATFORM() ->
+    .title =
+        { PLATFORM() ->
             [windows] Options
            *[other] Preferences
         }
@@ -18,11 +19,11 @@ pref-page =
 # This is used to determine the width of the search field in about:preferences,
 # in order to make the entire placeholder string visible
 #
-# Notice: The value of the `.style` attribute is a CSS string, and the `min-width`
+# Notice: The value of the `.style` attribute is a CSS string, and the `width`
 # is the name of the CSS property. It is intended only to adjust the element's width.
 # Do not translate.
-search-field =
-    .style = min-width: 15.4em
+search-input =
+    .style = width: 15.4em
 
 pane-general-title = General
 category-general =
@@ -60,7 +61,7 @@ restart-later = Restart Later
 
 ## General Section
 
-startup-label = Startup
+startup-header = Startup
 
 # { -brand-short-name } will be 'Firefox Developer Edition',
 # since this setting is only exposed in Firefox Developer Edition
@@ -94,7 +95,7 @@ startup-prev-session =
 disable-extension =
     .label = Disable Extension
 
-home-page-label = Home page
+home-page-header = Home page
 
 # Since the label of this button does not use the actual number,
 # in most cases you just need to provide a separate variant for the singular case.
@@ -114,7 +115,7 @@ restore-default =
     .label = Restore to Default
     .accesskey = R
 
-tabs-group-label = Tabs
+tabs-group-header = Tabs
 
 ctrl-tab-recently-used-order =
     .label = Ctrl+Tab cycles through tabs in recently used order
@@ -166,13 +167,13 @@ containers-disable-alert-cancel-button = Keep enabled
 
 ## General Section - Language & Appearance
 
-language-and-appearance-label = Language and Appearance
+language-and-appearance-header = Language and Appearance
 
-fonts-and-colors-label = Fonts & Colors
+fonts-and-colors-header = Fonts & Colors
 
-default-font-label = Default font
+default-font = Default font
     .accesskey = D
-default-font-size-label = Size
+default-font-size = Size
     .accesskey = S
 
 advanced-fonts =
@@ -183,9 +184,9 @@ colors-settings =
     .label = Colors…
     .accesskey = C
 
-language-label = Language
+language-header = Language
 
-choose-language-label = Choose your preferred language for displaying pages
+choose-language-description = Choose your preferred language for displaying pages
 
 choose-button =
     .label = Choose…
@@ -205,9 +206,9 @@ check-user-spelling =
 
 ## General Section - Files and Applications
 
-files-and-applications-label = Files and Applications
+files-and-applications-title = Files and Applications
 
-download-label = Downloads
+download-header = Downloads
 
 download-save-to =
     .label = Save files to
@@ -216,12 +217,12 @@ download-save-to =
 download-choose-folder =
     .label =
         { PLATFORM() ->
-            [macosx] Choose…
+            [macos] Choose…
            *[other] Browse…
         }
     .accesskey =
         { PLATFORM() ->
-            [macosx] e
+            [macos] e
            *[other] o
         }
 
@@ -229,7 +230,7 @@ download-always-ask-where =
     .label = Always ask you where to save files
     .accesskey = A
 
-applications-label = Applications
+applications-header = Applications
 
 applications-description = Choose how { -brand-short-name } handles the files you download from the web or the applications you use while browsing.
 
@@ -244,7 +245,7 @@ applications-action-column =
     .label = Action
     .accesskey = A
 
-drm-content-label = Digital Rights Management (DRM) Content
+drm-content-header = Digital Rights Management (DRM) Content
 
 play-drm-content =
     .label = Play DRM-controlled content
@@ -252,7 +253,7 @@ play-drm-content =
 
 play-drm-content-learn-more = Learn more
 
-update-application-label = { -brand-short-name } Updates
+update-application-title = { -brand-short-name } Updates
 
 update-application-description = Keep { -brand-short-name } up to date for the best performance, stability, and security.
 
@@ -286,7 +287,7 @@ update-enable-search-update =
 
 ## General Section - Performance
 
-performance-label = Performance
+performance-title = Performance
 
 performance-use-recommended-settings-checkbox =
     .label = Use recommended performance settings
@@ -313,7 +314,7 @@ performance-default-content-process-count =
 
 ## General Section - Browsing
 
-browsing-label = Browsing
+browsing-title = Browsing
 
 browsing-use-autoscroll =
     .label = Use autoscrolling
@@ -324,11 +325,11 @@ browsing-use-smooth-scrolling =
     .accesskey = m
 
 browsing-use-onscreen-keyboard =
-    .label = Always use the cursor keys to navigate within pages
+    .label = Show a touch keyboard when necessary
     .accesskey = c
 
 browsing-use-cursor-navigation =
-    .label = Show a touch keyboard when necessary
+    .label = Always use the cursor keys to navigate within pages
     .accesskey = k
 
 browsing-search-on-start-typing =
@@ -337,7 +338,7 @@ browsing-search-on-start-typing =
 
 ## General Section - Proxy
 
-network-proxy-label = Network Proxy
+network-proxy-title = Network Proxy
 
 network-proxy-connection-learn-more = Learn More
 
