@@ -96,10 +96,12 @@ disable-extension =
 
 home-page-label = Home page
 
-use-current-page =
+# Since the label of this button does not use the actual number,
+# in most cases you just need to provide a separate variant for the singular case.
+use-current-pages =
     .label =
         { $tabCount ->
-            [one] Use Current Page
+            [1] Use Current Page
            *[other] Use Current Pages
         }
     .accesskey = C
@@ -120,7 +122,7 @@ ctrl-tab-recently-used-order =
 
 open-new-link-as-tabs =
     .label = Open links in tabs instead of new windows
-    .acccesskey = w
+    .accesskey = w
 
 warn-on-close-multiple-tabs =
     .label = Warn you when closing multiple tabs
@@ -193,9 +195,6 @@ translate-web-pages =
     .label = Translate web content
     .accesskey = T
 
-# The <img/> will be replaced by the translation provider's logo
-translation-options-attribution = Translations by <img/>
-
 translate-exceptions =
     .label = Exceptions…
     .accesskey = x
@@ -234,7 +233,7 @@ applications-label = Applications
 
 applications-description = Choose how { -brand-short-name } handles the files you download from the web or the applications you use while browsing.
 
-applications-filter-empty-text =
+applications-filter =
     .placeholder = Search file types or applications
 
 applications-type-column =
@@ -305,7 +304,7 @@ performance-limit-content-process-option = Content process limit
     .accesskey = l
 
 performance-limit-content-process-enabled-desc = Additional content processes can improve performance when using multiple tabs, but will also use more memory.
-performance-limit-content-process-disabled-desc = Modifying the number of content processes is only possible with multiprocess { -brand-short-name }. <label>Learn how to check if multiprocess is enabled</label>
+performance-limit-content-process-disabled-desc = Modifying the number of content processes is only possible with multiprocess { -brand-short-name }. <a>Learn how to check if multiprocess is enabled</a>
 
 # Variables:
 #   $num - default value of the `dom.ipc.processCount` pref.
