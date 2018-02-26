@@ -28,6 +28,14 @@ selector-multi = { $num ->
        *[feminine] lei
     }
 
+delete-all-message-special-cases =
+    { $num ->
+        [1] Eliminare questo download?
+        [2] Eliminare questo paio di download?
+        [12] Eliminare questa dozzina di download?        
+       *[other] Eliminare { $num } download?
+}
+
 # Nested selectors
 # selector-nested =
 #    { $gender ->
