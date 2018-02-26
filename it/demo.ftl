@@ -28,6 +28,12 @@ selector-multi = { $num ->
        *[feminine] lei
     }
 
+delete-all-message =
+    { $num ->
+        [1] Eliminare questo download?
+       *[other] Elimina { $num } download?
+}
+
 delete-all-message-special-cases =
     { $num ->
         [1] Eliminare questo download?
