@@ -1,7 +1,7 @@
 # Plurals
 delete-all-message = { $num ->
-        [one] Eliminare questo download?
-       *[other] Eliminare { $num } download?
+        [one] Eliminare questo download TEST?
+       *[other] Eliminare { $num } download TEST?
     }
 # PLATFORM() selector in attribute
 platform-attribute =
@@ -27,12 +27,6 @@ selector-multi = { $num ->
         [masculine] lui
        *[feminine] lei
     }
-
-delete-all-message =
-    { $num ->
-        [1] Eliminare questo download?
-       *[other] Elimina { $num } download?
-}
 
 delete-all-message-special-cases =
     { $num ->
