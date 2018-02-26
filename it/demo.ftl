@@ -1,7 +1,7 @@
 # Plurals
 delete-all-message = { $num ->
-        [one] Eliminare questo download TEST?
-       *[other] Eliminare { $num } download TEST?
+        [1] Eliminare questo download?
+       *[other] Eliminare { $num } download?
     }
 # PLATFORM() selector in attribute
 platform-attribute =
