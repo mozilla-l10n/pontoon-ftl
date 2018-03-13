@@ -417,3 +417,95 @@ search-find-more-link = Find more search engines
 search-keyword-warning-title = Duplicate Keyword
 search-keyword-warning-engine = You have chosen a keyword that is currently in use by “{ $name }”. Please select another.
 search-keyword-warning-bookmark = You have chosen a keyword that is currently in use by a bookmark. Please select another.
+
+## Containers pane
+
+containers-back-link = « Go Back
+containers-header = Container Tabs
+containers-add-button =
+    .label = Add New Container
+    .accesskey = A
+
+## Containers - Containers window
+
+containers-window-title-new = Add New Container
+containers-window-title-update = { $name } Container Preferences
+
+containers-window-close =
+    .key = w
+
+containers-name-label = Name
+    .accesskey = N
+    .style = min-width: 4rem
+
+containers-name-text =
+    .placeholder = Enter a container name
+
+containers-icon-label = Icon
+    .accesskey = I
+    .style = min-width: 4rem
+
+containers-color-label = Color
+    .accesskey = o
+    .style = min-width: 4rem
+
+containers-button-ok =
+    .label = Done
+    .accesskey = D
+
+containers-remove-alert-title = Remove This Container?
+
+# Variables:
+#   $count (Number) - Number of tabs that will be closed.
+containers-remove-alert-msg =
+    { $count ->
+       *[one] If you remove this Container now, { $count } container tab will be closed. Are you sure you want to remove this Container?
+        [other] If you remove this Container now, { $count } container tabs will be closed. Are you sure you want to remove this Container?
+    }
+
+containers-remove-ok-button = Remove this Container
+containers-remove-cancel-button = Don’t remove this Container
+
+containers-color-blue =
+    .label = Blue
+containers-color-turquoise =
+    .label = Turquoise
+containers-color-green =
+    .label = Green
+containers-color-yellow =
+    .label = Yellow
+containers-color-orange =
+    .label = Orange
+containers-color-red =
+    .label = Red
+containers-color-pink =
+    .label = Pink
+containers-color-purple =
+    .label = Purple
+
+containers-fingerprint =
+    .label = Fingerprint
+containers-briefcase =
+    .label = Briefcase
+# String represents a money sign but currently uses a dollar sign so don't change to local currency
+# See Bug 1291672
+containers-dollar =
+    .label = Dollar sign
+containers-cart =
+    .label = Shopping cart
+containers-circle =
+    .label = Dot
+containers-vacation =
+    .label = Vacation
+containers-gift =
+    .label = Gift
+containers-food =
+    .label = Food
+containers-fruit =
+    .label = Fruit
+containers-pet =
+    .label = Pet
+containers-tree =
+    .label = Tree
+containers-chill =
+    .label = Chill
