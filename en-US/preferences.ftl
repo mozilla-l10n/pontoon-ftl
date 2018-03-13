@@ -250,6 +250,13 @@ download-always-ask-where =
     .label = Always ask you where to save files
     .accesskey = A
 
+download-choose-folder = Choose Download Folder:
+
+download-folder-name-desktop =
+    .label = Desktop
+download-folder-name-downloads =
+    .label = Downloads
+
 applications-header = Applications
 
 applications-description = Choose how { -brand-short-name } handles the files you download from the web or the applications you use while browsing.
@@ -264,6 +271,32 @@ applications-type-column =
 applications-action-column =
     .label = Action
     .accesskey = A
+
+applications-file-ending = { $extension } file
+
+applications-type-web-feed = Web Feed
+applications-type-video-podcast-feed = Video Podcast
+applications-type-audio-podcast-feed = Podcast
+applications-type-pdf = Portable Document Format (PDF)
+
+applications-type-web-feed-with-type = Web Feed ({ $type })
+applications-type-video-podcast-feed-with-type = Video Podcast ({ $type })
+applications-type-audio-podcast-feed-with-type = Podcast ({ $type })
+applications-type-pdf-with-type = Portable Document Format (PDF) ({ $type })
+
+applications-type-description-with-type = { $description } ({ $type })
+
+applications-action-preview-in-app = Preview in { -brand-short-name }
+applications-action-always-ask = Always ask
+applications-action-save-file = Save File
+applications-action-use-app = Use { $name }
+applications-action-add-live-bookmarks = Add Live Bookmarks in { -brand-short-name }
+applications-action-use-default = Use { $name } (default)
+applications-action-use-plugin-in = Use { $name } (in { -brand-short-name })
+applications-action-use-other-app = Use other…
+applications-action-manage-app = Application Details…
+
+applications-choose-app-title = Select Helper Application
 
 drm-content-header = Digital Rights Management (DRM) Content
 
