@@ -67,6 +67,39 @@ should-restart-ok = Restart { -brand-short-name } now
 revert-no-restart-button = Revert
 restart-later = Restart Later
 
+## Extension Control Notifications
+##
+## These strings are used to inform the user
+## about changes made by extensions to browser settings.
+##
+## <image/> is going to be replaced by the extension icon
+##
+## Variables:
+##   $name (String): name of the extension
+
+# This string is shown to notify the user that their home page is being controlled by an extension.
+extension-controlled-homepage = An extension, <img/> { $name }, is controlling your home page.
+
+# This string is shown to notify the user that their new tab page is being controlled by an extension.
+extension-controlled-new-tab-url = An extension, <img/> { $name }, is controlling your New Tab page.
+
+# This string is shown to notify the user that the default search engine is being controlled
+# by an extension. %S is the icon and name of the extension.
+extension-controlled-default-search = An extension, <img/> { $name }, has set your default search engine.
+
+# This string is shown to notify the user that Container Tabs are being enabled by an extension
+# %S is the container addon controlling it
+extension-controlled-privacy-containers = An extension, <img/> { $name }, requires Container Tabs.
+
+# This string is shown to notify the user that their tracking protection preferences are being controlled by an extension.
+extension-controlled-websites-tracking-protection-mode = An extension, <img/> { $name }, is controlling tracking protection.
+
+# This string is shown to notify the user that their proxy configuration preferences are being controlled by an extension.
+extension-controlled-proxy-config = An extension, <img/> { $name }, is controlling how { -brand-short-name } connects to the internet.
+
+# This string is shown to notify the user how to enable an extension that they disabled.
+extension-controlled-enable = To enable the extension go to <img/> Add-ons in the <img/> menu. <img/>
+
 ## Preferences UI Search Results
 
 search-results-header = Search Results
@@ -392,6 +425,8 @@ browsing-search-on-start-typing =
 ## General Section - Proxy
 
 network-proxy-title = Network Proxy
+
+network-proxy-connection-description = Configure how { -brand-short-name } connects to the internet.
 
 network-proxy-connection-learn-more = Learn More
 
