@@ -19,11 +19,19 @@ pref-page =
 # This is used to determine the width of the search field in about:preferences,
 # in order to make the entire placeholder string visible
 #
+# Please keep the placeholder string shorter than around 30 characters
+# to avoid truncation.
+#
 # Notice: The value of the `.style` attribute is a CSS string, and the `width`
 # is the name of the CSS property. It is intended only to adjust the element's width.
 # Do not translate.
-search-input =
+search-input-box =
     .style = width: 15.4em
+    .placeholder =
+        { $PLATFORM ->
+            [windows] Find in Options
+           *[other] Find in Preferences
+        }
 
 pane-general-title = General
 category-general =
@@ -58,6 +66,18 @@ should-restart-title = Restart { -brand-short-name }
 should-restart-ok = Restart { -brand-short-name } now
 revert-no-restart-button = Revert
 restart-later = Restart Later
+
+## Preferences UI Search Results
+
+search-results-header = Search Results
+
+search-results-sorry-message =
+    { PLATFORM() ->
+        [windows] Sorry! There are no results in Options for "{ $query }".
+        *[other] Sorry! There are no results in Preferences for "{ $query }".
+    }
+
+search-results-need-help = Need help? Visit <a>{ -brand-short-name } Support</a>
 
 ## General Section
 
