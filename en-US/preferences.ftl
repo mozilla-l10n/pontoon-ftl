@@ -16,11 +16,15 @@ pref-page =
            *[other] Preferences
         }
 
+# This string is currently used only in Firefox 60 and will be removed when not
+# needed for x-channel. See bug 1445686 for details.
+search-input =
+    .style = width: 15.4em
+
 # This is used to determine the width of the search field in about:preferences,
 # in order to make the entire placeholder string visible
 #
-# Please keep the placeholder string shorter than around 30 characters
-# to avoid truncation.
+# Please keep the placeholder string short to avoid truncation.
 #
 # Notice: The value of the `.style` attribute is a CSS string, and the `width`
 # is the name of the CSS property. It is intended only to adjust the element's width.
@@ -28,14 +32,24 @@ pref-page =
 search-input-box =
     .style = width: 15.4em
     .placeholder =
-        { $PLATFORM ->
+        { PLATFORM() ->
             [windows] Find in Options
            *[other] Find in Preferences
         }
 
+policies-notice =
+    { PLATFORM() ->
+        [windows] Your organization has disabled the ability to change some options.
+       *[other] Your organization has disabled the ability to change some preferences.
+    }
+
 pane-general-title = General
 category-general =
     .tooltiptext = { pane-general-title }
+
+pane-home-title = Home
+category-home =
+    .tooltiptext = { pane-home-title }
 
 pane-search-title = Search
 category-search =
@@ -64,50 +78,18 @@ feature-enable-requires-restart = { -brand-short-name } must restart to enable t
 feature-disable-requires-restart = { -brand-short-name } must restart to disable this feature.
 should-restart-title = Restart { -brand-short-name }
 should-restart-ok = Restart { -brand-short-name } now
-revert-no-restart-button = Revert
+cancel-no-restart-button = Cancel
 restart-later = Restart Later
-
-## Extension Control Notifications
-##
-## These strings are used to inform the user
-## about changes made by extensions to browser settings.
-##
-## <image/> is going to be replaced by the extension icon
-##
-## Variables:
-##   $name (String): name of the extension
-
-# This string is shown to notify the user that their home page is being controlled by an extension.
-extension-controlled-homepage = An extension, <img/> { $name }, is controlling your home page.
-
-# This string is shown to notify the user that their new tab page is being controlled by an extension.
-extension-controlled-new-tab-url = An extension, <img/> { $name }, is controlling your New Tab page.
-
-# This string is shown to notify the user that the default search engine is being controlled
-# by an extension. %S is the icon and name of the extension.
-extension-controlled-default-search = An extension, <img/> { $name }, has set your default search engine.
-
-# This string is shown to notify the user that Container Tabs are being enabled by an extension
-# %S is the container addon controlling it
-extension-controlled-privacy-containers = An extension, <img/> { $name }, requires Container Tabs.
-
-# This string is shown to notify the user that their tracking protection preferences are being controlled by an extension.
-extension-controlled-websites-tracking-protection-mode = An extension, <img/> { $name }, is controlling tracking protection.
-
-# This string is shown to notify the user that their proxy configuration preferences are being controlled by an extension.
-extension-controlled-proxy-config = An extension, <img/> { $name }, is controlling how { -brand-short-name } connects to the internet.
-
-# This string is shown to notify the user how to enable an extension that they disabled.
-extension-controlled-enable = To enable the extension go to <img/> Add-ons in the <img/> menu. <img/>
 
 ## Preferences UI Search Results
 
 search-results-header = Search Results
 
+# `<span></span>` will be replaced by the search term.
 search-results-sorry-message =
     { PLATFORM() ->
-        [windows] Sorry! There are no results in Options for "{ $query }".
-        *[other] Sorry! There are no results in Preferences for "{ $query }".
+        [windows] Sorry! There are no results in Options for “<span></span>”.
+       *[other] Sorry! There are no results in Preferences for “<span></span>”.
     }
 
 search-results-need-help = Need help? Visit <a>{ -brand-short-name } Support</a>
@@ -147,26 +129,6 @@ startup-prev-session =
 
 disable-extension =
     .label = Disable Extension
-
-home-page-header = Home page
-
-# Since the label of this button does not use the actual number,
-# in most cases you just need to provide a separate variant for the singular case.
-use-current-pages =
-    .label =
-        { $tabCount ->
-            [1] Use Current Page
-           *[other] Use Current Pages
-        }
-    .accesskey = C
-
-choose-bookmark =
-    .label = Use Bookmark…
-    .accesskey = B
-
-restore-default =
-    .label = Restore to Default
-    .accesskey = R
 
 tabs-group-header = Tabs
 
@@ -283,13 +245,6 @@ download-always-ask-where =
     .label = Always ask you where to save files
     .accesskey = A
 
-download-choose-folder = Choose Download Folder:
-
-download-folder-name-desktop =
-    .label = Desktop
-download-folder-name-downloads =
-    .label = Downloads
-
 applications-header = Applications
 
 applications-description = Choose how { -brand-short-name } handles the files you download from the web or the applications you use while browsing.
@@ -305,32 +260,6 @@ applications-action-column =
     .label = Action
     .accesskey = A
 
-applications-file-ending = { $extension } file
-
-applications-type-web-feed = Web Feed
-applications-type-video-podcast-feed = Video Podcast
-applications-type-audio-podcast-feed = Podcast
-applications-type-pdf = Portable Document Format (PDF)
-
-applications-type-web-feed-with-type = Web Feed ({ $type })
-applications-type-video-podcast-feed-with-type = Video Podcast ({ $type })
-applications-type-audio-podcast-feed-with-type = Podcast ({ $type })
-applications-type-pdf-with-type = Portable Document Format (PDF) ({ $type })
-
-applications-type-description-with-type = { $description } ({ $type })
-
-applications-action-preview-in-app = Preview in { -brand-short-name }
-applications-action-always-ask = Always ask
-applications-action-save-file = Save File
-applications-action-use-app = Use { $name }
-applications-action-add-live-bookmarks = Add Live Bookmarks in { -brand-short-name }
-applications-action-use-default = Use { $name } (default)
-applications-action-use-plugin-in = Use { $name } (in { -brand-short-name })
-applications-action-use-other-app = Use other…
-applications-action-manage-app = Application Details…
-
-applications-choose-app-title = Select Helper Application
-
 drm-content-header = Digital Rights Management (DRM) Content
 
 play-drm-content =
@@ -343,7 +272,7 @@ update-application-title = { -brand-short-name } Updates
 
 update-application-description = Keep { -brand-short-name } up to date for the best performance, stability, and security.
 
-update-application-info = Version { $version }. <a>What's new</a>
+update-application-info = Version { $version } <a>What's new</a>
 
 update-history =
     .label = Show Update History…
@@ -426,13 +355,57 @@ browsing-search-on-start-typing =
 
 network-proxy-title = Network Proxy
 
-network-proxy-connection-description = Configure how { -brand-short-name } connects to the internet.
-
 network-proxy-connection-learn-more = Learn More
 
 network-proxy-connection-settings =
     .label = Settings…
     .accesskey = e
+
+## Home Section
+
+home-new-windows-tabs-header = New Windows and Tabs
+
+home-new-windows-tabs-description = Choose what you see when you open your homepage, new windows, and new tabs
+
+## Home Section - Home Page Customization
+
+home-homepage-mode-label = Homepage and new windows
+
+home-newtabs-mode-label = New tabs
+
+home-restore-defaults =
+    .label = Restore Defaults
+    .accesskey = R
+
+# "Firefox" should be treated as a brand and kept in English,
+# while "Home" and "(Default)" can be localized.
+home-mode-choice-default =
+    .label = Firefox Home (Default)
+
+home-mode-choice-custom =
+    .label = Custom URLs…
+
+home-mode-choice-blank =
+    .label = Blank Page
+
+home-homepage-custom-url =
+    .placeholder = Paste a URL…
+
+# This string has a special case for '1' and [other] (default). If necessary for
+# your language, you can add {$tabCount} to your translations and use the
+# standard CLDR forms, or only use the form for [other] if both strings should
+# be identical.
+use-current-pages =
+    .label =
+        { $tabCount ->
+            [1] Use Current Page
+           *[other] Use Current Pages
+        }
+    .accesskey = C
+
+choose-bookmark =
+    .label = Use Bookmark…
+    .accesskey = B
 
 ## Search Section
 
@@ -465,7 +438,7 @@ search-suggestions-cant-show = Search suggestions will not be shown in location 
 
 search-one-click-header = One-Click Search Engines
 
-search-choose-alternative-engines = Choose the alternative search engines that appear below the address bar and search bar when you start to enter a keyword.
+search-one-click-desc = Choose the alternative search engines that appear below the address bar and search bar when you start to enter a keyword.
 
 search-choose-engine-column =
     .label = Search Engine
@@ -482,11 +455,15 @@ search-remove-engine =
 
 search-find-more-link = Find more search engines
 
+# This warning is displayed when the chosen keyword is already in use
+# ('Duplicate' is an adjective)
 search-keyword-warning-title = Duplicate Keyword
+# Variables:
+#   $name (String) - Name of a search engine.
 search-keyword-warning-engine = You have chosen a keyword that is currently in use by “{ $name }”. Please select another.
 search-keyword-warning-bookmark = You have chosen a keyword that is currently in use by a bookmark. Please select another.
 
-## Containers pane
+## Containers Section
 
 containers-back-link = « Go Back
 containers-header = Container Tabs
@@ -494,86 +471,388 @@ containers-add-button =
     .label = Add New Container
     .accesskey = A
 
-## Containers - Containers window
+containers-preferences-button =
+    .label = Preferences
+containers-remove-button =
+    .label = Remove
 
-containers-window-title-new = Add New Container
-containers-window-title-update = { $name } Container Preferences
+## Sync Section - Signed out
 
-containers-window-close =
-    .key = w
+sync-signedout-caption = Take Your Web With You
+sync-signedout-description = Synchronize your bookmarks, history, tabs, passwords, add-ons, and preferences across all your devices.
 
-containers-name-label = Name
-    .accesskey = N
-    .style = min-width: 4rem
+sync-signedout-account-title = Connect with a { -fxaccount-brand-name }
+sync-signedout-account-create = Don’t have an account? Get started
+    .accesskey = C
 
-containers-name-text =
-    .placeholder = Enter a container name
-
-containers-icon-label = Icon
+sync-signedout-account-signin =
+    .label = Sign In…
     .accesskey = I
-    .style = min-width: 4rem
 
-containers-color-label = Color
-    .accesskey = o
-    .style = min-width: 4rem
+## Sync Section - Signed in
 
-containers-button-ok =
-    .label = Done
+sync-profile-picture =
+    .tooltiptext = Change profile picture
+
+sync-disconnect =
+    .label = Disconnect…
     .accesskey = D
 
-containers-remove-alert-title = Remove This Container?
+sync-manage-account = Manage account
+    .accesskey = o
 
-# Variables:
-#   $count (Number) - Number of tabs that will be closed.
-containers-remove-alert-msg =
-    { $count ->
-       *[one] If you remove this Container now, { $count } container tab will be closed. Are you sure you want to remove this Container?
-        [other] If you remove this Container now, { $count } container tabs will be closed. Are you sure you want to remove this Container?
-    }
+sync-signedin-unverified = { $email } is not verified.
+sync-signedin-login-failure = Please sign in to reconnect { $email }
 
-containers-remove-ok-button = Remove this Container
-containers-remove-cancel-button = Don’t remove this Container
+sync-resend-verification =
+    .label = Resend Verification
+    .accesskey = d
 
-containers-color-blue =
-    .label = Blue
-containers-color-turquoise =
-    .label = Turquoise
-containers-color-green =
-    .label = Green
-containers-color-yellow =
-    .label = Yellow
-containers-color-orange =
-    .label = Orange
-containers-color-red =
-    .label = Red
-containers-color-pink =
-    .label = Pink
-containers-color-purple =
-    .label = Purple
+sync-remove-account =
+    .label = Remove Account
+    .accesskey = p
 
-containers-fingerprint =
-    .label = Fingerprint
-containers-briefcase =
-    .label = Briefcase
-# String represents a money sign but currently uses a dollar sign so don't change to local currency
-# See Bug 1291672
-containers-dollar =
-    .label = Dollar sign
-containers-cart =
-    .label = Shopping cart
-containers-circle =
-    .label = Dot
-containers-vacation =
-    .label = Vacation
-containers-gift =
-    .label = Gift
-containers-food =
-    .label = Food
-containers-fruit =
-    .label = Fruit
-containers-pet =
-    .label = Pet
-containers-tree =
-    .label = Tree
-containers-chill =
-    .label = Chill
+sync-sign-in =
+    .label = Sign in
+    .accesskey = g
+
+sync-signedin-settings-header = Sync Settings
+sync-signedin-settings-desc = Choose what to synchronize on your devices using { -brand-short-name }
+
+sync-engine-bookmarks =
+    .label = Bookmarks
+    .accesskey = m
+
+sync-engine-history =
+    .label = History
+    .accesskey = r
+
+sync-engine-tabs =
+    .label = Open tabs
+    .tooltiptext = A list of what’s open on all synced devices
+    .accesskey = T
+
+sync-engine-logins =
+    .label = Logins
+    .tooltiptext = Usernames and passwords you’ve saved
+    .accesskey = L
+
+sync-engine-addresses =
+    .label = Addresses
+    .tooltiptext = Postal addresses you’ve saved (desktop only)
+    .accesskey = e
+
+sync-engine-creditcards =
+    .label = Credit cards
+    .tooltiptext = Names, numbers and expiry dates (desktop only)
+    .accesskey = C
+
+sync-engine-addons =
+    .label = Add-ons
+    .tooltiptext = Extensions and themes for { -brand-short-name } desktop
+    .accesskey = A
+
+sync-engine-prefs =
+    .label =
+        { PLATFORM() ->
+            [windows] Options
+           *[other] Preferences
+        }
+    .tooltiptext = General, Privacy, and Security settings you’ve changed
+    .accesskey = S
+
+sync-device-name-header = Device Name
+
+sync-device-name-change =
+    .label = Change Device Name…
+    .accesskey = h
+
+sync-device-name-cancel =
+    .label = Cancel
+    .accesskey = n
+
+sync-device-name-save =
+    .label = SAve
+    .accesskey = v
+
+sync-mobilepromo-single = Connect another device
+
+sync-mobilepromo-multi = Manage devices
+
+sync-tos-link = Terms of Service
+
+sync-fxa-privacy-notice = Privacy Notice
+
+## Privacy Section
+
+privacy-header = Browser Privacy
+
+## Privacy Section - Forms
+
+forms-header = Forms & Passwords
+forms-remember-logins =
+    .label = Remember logins and passwords for websites
+    .accesskey = R
+forms-exceptions =
+    .label = Exceptions…
+    .accesskey = x
+forms-saved-logins =
+    .label = Saved Logins…
+    .accesskey = L
+forms-master-pw-use =
+    .label = Use a master password
+    .accesskey = U
+forms-master-pw-change =
+    .label = Change Master Password
+    .accesskey = M
+
+## Privacy Section - History
+
+history-header = History
+
+history-remember-description = { -brand-short-name } will remember your browsing, download, form and search history.
+history-dontremember-description = { -brand-short-name } will use the same settings as private browsing, and will not remember any history as you browse the Web.
+
+history-private-browsing-permanent =
+    .label = Always use private browsing mode
+    .accesskey = p
+
+history-remember-option =
+    .label = Remember my browsing and download history
+    .accesskey = b
+
+history-remember-search-option =
+    .label = Remember search and form history
+    .accesskey = f
+
+history-clear-on-close-option =
+    .label = Clear history when { -brand-short-name } closes
+    .accesskey = r
+
+history-clear-on-close-settings =
+    .label = Settings…
+    .accesskey = t
+
+history-clear-button =
+    .label = Clear History…
+    .accesskey = s
+
+## Privacy Section - Site Data
+
+sitedata-header = Cookies and Site Data
+
+sitedata-learn-more = Learn more
+
+sitedata-accept-cookies-option =
+    .label = Accept cookies and site data from websites (recommended)
+    .accesskey = A
+
+sitedata-block-cookies-option =
+    .label = Block cookies and site data (may cause websites to break)
+    .accesskey = B
+
+sitedata-keep-until = Keep until
+    .accesskey = u
+
+sitedata-keep-until-expire =
+    .label = they expire
+sitedata-keep-until-close =
+    .label = I close { -brand-short-name }
+
+sitedata-accept-third-party-desc = Accept third-party cookies and site data
+    .accesskey = y
+
+sitedata-accept-third-party-always-option =
+    .label = Always
+sitedata-accept-third-party-visited-option =
+    .label = From visited
+sitedata-accept-third-party-never-option =
+    .label = Never
+
+sitedata-clear =
+    .label = Clear Data…
+    .accesskey = l
+
+sitedata-settings =
+    .label = Manage Data…
+    .accesskey = M
+
+sitedata-cookies-exceptions =
+    .label = Exceptions…
+    .accesskey = E
+
+## Privacy Section - Address Bar
+
+addressbar-header = Address Bar
+
+addressbar-suggest = When using the address bar, suggest
+
+addressbar-locbar-history-option =
+    .label = Browsing history
+    .accesskey = H
+addressbar-locbar-bookmarks-option =
+    .label = Bookmarks
+    .accesskey = k
+addressbar-locbar-openpage-option =
+    .label = Open tabs
+    .accesskey = O
+
+addressbar-suggestions-settings = Change preferences for search engine suggestions
+
+## Privacy Section - Tracking
+
+tracking-header = Tracking Protection
+
+tracking-description = Tracking Protection blocks online trackers that collect your browsing data across multiple websites. <a>Learn more about Tracking Protection and your privacy</a>
+
+tracking-mode-label = Use Tracking Protection to block known trackers
+
+tracking-mode-always =
+    .label = Always
+    .accesskey = y
+tracking-mode-private =
+    .label = Only in private windows
+    .accesskey = l
+tracking-mode-never =
+    .label = Never
+    .accesskey = n
+
+# This string is displayed if privacy.trackingprotection.ui.enabled is set to false.
+# This currently happens on the release and beta channel.
+tracking-pbm-label = Use Tracking Protection in Private Browsing to block known trackers
+
+tracking-pbm-checkbox =
+    .accesskey = v
+
+tracking-exceptions =
+    .label = Exceptions…
+    .accesskey = x
+
+tracking-change-block-list =
+    .label = Change Block List…
+    .accesskey = C
+
+## Privacy Section - Permissions
+
+permissions-header = Permissions
+
+permissions-location = Location
+permissions-location-settings =
+    .label = Settings…
+    .accesskey = t
+
+permissions-camera = Camera
+permissions-camera-settings =
+    .label = Settings…
+    .accesskey = t
+
+permissions-microphone = Microphone
+permissions-microphone-settings =
+    .label = Settings…
+    .accesskey = t
+
+permissions-notification = Notofications
+permissions-notification-settings =
+    .label = Settings…
+    .accesskey = t
+permissions-notification-link = Learn more
+
+permissions-notification-pause =
+    .label = Pause notifications until { -brand-short-name } restarts
+    .accesskey = n
+
+permissions-block-popups =
+    .label = Block pop-up windows
+    .accesskey = B
+
+permissions-block-popups-exceptions =
+    .label = Exceptions…
+    .accesskey = E
+
+permissions-addon-install-warning =
+    .label = Warn you when websites try to install add-ons
+    .accesskey = W
+
+permissions-addon-exceptions =
+    .label = Exceptions…
+    .accesskey = E
+
+permissions-a11y-privacy-checkbox =
+    .label = Prevent accessibility services from accessing your browser
+    .accesskey = a
+
+permissions-a11y-privacy-link = Learn more
+
+## Privacy Section - Data Collection
+
+collection-header = { -brand-short-name } Data Collection and Use
+
+collection-description = We strive to provide you with choices and collect only what we need to provide and improve { -brand-short-name } for everyone. We always ask permission before receiving personal information.
+collection-privacy-notice = Privacy Notice
+
+collection-health-report =
+    .label = Allow { -brand-short-name } to send technical and interaction data to Mozilla
+    .accesskey = r
+collection-health-report-link = Learn more
+
+# This message is displayed above disabled data sharing options in developer builds
+# or builds with no Telemetry support available.
+collection-health-report-disabled = Data reporting is disabled for this build configuration
+
+collection-browser-errors =
+    .label = Allow { -brand-short-name } to send browser error reports (including error messages) to Mozilla
+    .accesskey = b
+collection-browser-errors-link = Learn more
+
+collection-backlogged-crash-reports =
+    .label = Allow { -brand-short-name } to send backlogged crash reports on your behalf
+    .accesskey = c
+collection-backlogged-crash-reports-link = Learn more
+
+## Privacy Section - Security
+##
+## It is important that wording follows the guidelines outlined on this page:
+## https://developers.google.com/safe-browsing/developers_guide_v2#AcceptableUsage
+
+security-header = Security
+
+security-browsing-protection = Deceptive Content and Dangerous Software Protection
+
+security-enable-safe-browsing =
+    .label = Block dangerous and deceptive content
+    .accesskey = B
+security-enable-safe-browsing-link = Learn more
+
+security-block-downloads =
+    .label = Block dangerous downloads
+    .accesskey = D
+
+security-block-uncommon-software =
+    .label = Warn you about unwanted and uncommon software
+    .accesskey = C
+
+## Privacy Section - Certificates
+
+certs-header = Certificates
+
+certs-personal-label = When a server requests your personal certificate
+
+certs-select-auto-option =
+    .label = Select one automatically
+    .accesskey = S
+
+certs-select-ask-option =
+    .label = Ask you every time
+    .accesskey = A
+
+certs-enable-ocsp =
+    .label = Query OCSP responder servers to confirm the current validity of certificates
+    .accesskey = Q
+
+certs-view =
+    .label = View Certificates…
+    .accesskey = C
+
+certs-devices =
+    .label = Security Devices…
+    .accesskey = D
