@@ -13,3 +13,5 @@
 ## Reference: https://www.mozilla.org/styleguide/communications/translation/
 
 -brand-short-name = Firefox
+
+-fxaccount-brand-name = Firefox Account
