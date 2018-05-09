@@ -79,6 +79,18 @@ selector-multi =
        [feminine] her
    }
 
+// StringExpression
+string-expression = { "" }
+
+// NumberExpression
+number-expression = { 5 }
+
+// VariantExpression
+variant-expression = { -foo[bar] }
+
+// AttributeExpression
+attribute-expression = { my_id.title }
+
 // Nested selectors
 // selector-nested =
 //    { $gender ->
