@@ -92,14 +92,14 @@ variant-expression = { -foo[bar] }
 attribute-expression = { my_id.title }
 
 // Nested selectors
-// selector-nested =
-//    { $gender ->
-//       *[masculine] { $num ->
-//            [one] There is one email for her
-//           *[other] There are many emails for her
-//        }
-//        [feminine] { $num ->
-//            [one] There is one email for him
-//           *[other] There are many emails for him
-//        }
-//    }
+selector-nested =
+   { $gender ->
+      *[masculine] { $num ->
+           [one] There is one email for her
+          *[other] There are many emails for her
+       }
+       [feminine] { $num ->
+           [one] There is one email for him
+          *[other] There are many emails for him
+       }
+   }
