@@ -17,7 +17,8 @@ file-menu =
 shotIndexNoExpirationSymbol = ∞
     .title = Ta posnetek ne poteče
 # Plurals
-delete-all-message = { $num ->
+delete-all-message =
+    { $num ->
         [1] #############a123+++
         [two] d#############as+++
         [few] ads#############+++
@@ -27,37 +28,35 @@ delete-all-message = { $num ->
 default-content-process-count =
     .label = { $num } (privzeto)
 # PLATFORM() selector
-platform = { PLATFORM() ->
+platform =
+    { PLATFORM() ->
         [win] Možnosti
        *[other] Nastavitve
     }
 # PLATFORM() selector in attribute
 platform-attribute =
-    .title = { PLATFORM() ->
+    .title =
+        { PLATFORM() ->
             [win] Možnosti
            *[other] Nastavitve
         }
 # Double selector in attributes
 download-choose-folder =
-    .label = { PLATFORM() ->
+    .label =
+        { PLATFORM() ->
             [macosx] Izberi …
            *[other] Brskaj …
         }
-    .accesskey = { PLATFORM() ->
+    .accesskey =
+        { PLATFORM() ->
             [macosx] e
            *[other] r
         }
-
-# Nested selectors
-# selector-nested =
-#    { $gender ->
-#       *[masculine] { $num ->
-#            [one] There is one email for her
-#           *[other] There are many emails for her
-#        }
-#        [feminine] { $num ->
-#            [one] There is one email for him
-#           *[other] There are many emails for him
-#        }
-#    }
-
+# StringExpression
+string-expression = { "" }
+# NumberExpression
+number-expression = { 5 }
+# VariantExpression
+variant-expression = { -foo[bar] }
+# AttributeExpression
+attribute-expression = { my_id.title }
