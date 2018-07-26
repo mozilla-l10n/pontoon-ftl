@@ -79,6 +79,12 @@ selector-multi =
        [feminine] her
    }
 
+// Term
+-term = Term
+
+// TermReference
+term-reference = Term { -term } Reference
+
 // StringExpression
 string-expression = { "" }
 
