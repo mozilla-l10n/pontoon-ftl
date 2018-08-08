@@ -8,11 +8,11 @@ feedbackUninstallCopy =
     and stay tuned for more to come!
 
 // Attributes: in original string
-emailOptInInput
+emailOptInInput =
     .placeholder = email goes here :)
 
 // Attributes: access keys
-file-menu
+file-menu =
     .label = File
     .accesskey = F
 
@@ -39,7 +39,7 @@ delete-all-message-special-cases =
 today-is = Today is { DATETIME($date, month: "long", year: "numeric", day: "numeric") }
 
 // Soft Launch
-default-content-process-count
+default-content-process-count =
     .label = { $num } (default)
 
 // PLATFORM() selector
@@ -50,14 +50,14 @@ platform =
     }
 
 // PLATFORM() selector in attribute
-platform-attribute
+platform-attribute =
     .title = { PLATFORM() ->
         [win] Options
        *[other] Preferences
     }
 
 // Double selector in attributes
-download-choose-folder
+download-choose-folder =
     .label =
         { PLATFORM() ->
             [macos] Choose…
