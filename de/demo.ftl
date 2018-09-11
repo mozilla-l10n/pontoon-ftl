@@ -1,3 +1,8 @@
+// Multiline string: press Shift + Enter to insert new line
+feedbackUninstallCopy = Deine Teilnahme am Firefox Test Pilot
+    bedeutet viel! Probiere doch auch unsere anderen Experimente
+    und freue dich auf das was kommt!
+
 # Value and an attribute
 shotIndexNoExpirationSymbol = ∞
     .title = Dieser Screenshot ist ewig
