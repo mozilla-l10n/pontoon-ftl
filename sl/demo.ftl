@@ -2,9 +2,10 @@
 title = O lokalizaciji12saasdasdasd3asd***
 # Multiline string: press Shift + Enter to insert new line
 feedbackUninstallCopy =
-    1Your participation in Firefox Test Pilot means
-    +++Your participation in Firefox Test Pilot means
-    2a lot! Please check out our other experiments,
+    Keep newlines 1Your participation
+    in Firefox Test Pilot means +++Your
+    participation in Firefox Test Pilot means 2a lot!
+    Please check out our other experiments,
     3and stay tuned for more to come!
 # Attributes: in original string
 emailOptInInput =
