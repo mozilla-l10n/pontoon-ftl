@@ -1,32 +1,33 @@
-// Simple string
+# Simple string
 title = About Localization
 
-// Multiline string: press Shift + Enter to insert new line
+# Multiline string: press Shift + Enter to insert new line
 feedbackUninstallCopy =
     Your participation in Firefox Test Pilot means
     a lot! Please check out our other experiments,
     and stay tuned for more to come!
 
-// Attributes: in original string
+# Attributes: in original string
 emailOptInInput =
     .placeholder = email goes here :)
 
-// Attributes: access keys
+# Attributes: access keys
 file-menu =
     .label = File
     .accesskey = F
 
-// Value and an attribute
+# Value and an attribute
 shotIndexNoExpirationSymbol = ∞
     .title = This shot does not expire
 
-// Plurals
+# Plurals
 delete-all-message =
     { $num ->
         [1] Delete this download?
        *[other] Delete { $num } downloads?
     }
-    
+
+# Plurals with custom values
 delete-all-message-special-cases =
     { $num ->
         [1] Delete this download?
@@ -35,28 +36,28 @@ delete-all-message-special-cases =
        *[other] Delete { $num } downloads?
     }
 
-// NUMBER Built-in function
+# NUMBER Built-in function
 today-is = Today is { DATETIME($date, month: "long", year: "numeric", day: "numeric") }
 
-// Soft Launch
+# Soft Launch
 default-content-process-count =
     .label = { $num } (default)
 
-// PLATFORM() selector
+# PLATFORM() selector
 platform = 
     { PLATFORM() ->
         [win] Options
        *[other] Preferences
     }
 
-// PLATFORM() selector in attribute
+# PLATFORM() selector in attribute
 platform-attribute =
     .title = { PLATFORM() ->
         [win] Options
        *[other] Preferences
     }
 
-// Double selector in attributes
+# Double selector in attributes
 download-choose-folder =
     .label =
         { PLATFORM() ->
@@ -69,7 +70,7 @@ download-choose-folder =
            *[other] o
         }
 
-// Multiple selectors
+# Multiple selectors
 selector-multi =
    There { $num ->
        [one] is one email
@@ -79,25 +80,25 @@ selector-multi =
        [feminine] her
    }
 
-// Term
+# Term
 -term = Term
 
-// TermReference
+# TermReference
 term-reference = Term { -term } Reference
 
-// StringExpression
+# StringExpression
 string-expression = { "" }
 
-// NumberExpression
+# NumberExpression
 number-expression = { 5 }
 
-// VariantExpression
+# VariantExpression
 variant-expression = { -foo[bar] }
 
-// AttributeExpression
+# AttributeExpression
 attribute-expression = { my_id.title }
 
-// Nested selectors
+# Nested selectors
 selector-nested =
    { $gender ->
       *[masculine] { $num ->
