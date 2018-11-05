@@ -23,7 +23,7 @@ shotIndexNoExpirationSymbol = ∞
 # Plurals
 delete-all-message =
     { $num ->
-        [1] Delete this download?
+        [one] Delete this download?
        *[other] Delete { $num } downloads?
     }
 
