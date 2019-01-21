@@ -74,7 +74,7 @@ attribute-expression = { my_id.title }
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 -sync-brand-short-name =
-    {
+    { $case ->
        *[nominative] Синхронизация
         [genitive] Синхронизации
         [accusative] Синхронизацию
@@ -82,14 +82,14 @@ attribute-expression = { my_id.title }
 # “Sync” can be localized, “Firefox” must be treated as a brand,
 # and kept in English.
 -sync-brand-name =
-    {
+    { $case ->
         [nominative] Синхронизация Firefox
        *[genitive] Синхронизации Firefox
     }
 # “Account” can be localized, “Firefox” must be treated as a brand,
 # and kept in English.
 -fxaccount-brand-name =
-    {
+    { $case ->
         [nominative] Аккаунт Firefox
         [instrumental] Аккаунтом Firefox
        *[prepositional] Аккаунте Firefox
