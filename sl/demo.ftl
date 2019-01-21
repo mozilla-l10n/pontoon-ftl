@@ -72,13 +72,30 @@ attribute-expression = { my_id.title }
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
-
 -sync-brand-short-name =
     { $case ->
-       *[nominative] Синхронизация
-        [genitive] Синхронизации
-        [accusative] Синхронизацию
+        *[nom] { $capitalization ->
+           *[upper] Синхронізація
+            [lower] синхронізація
+        }
+        [gen] { $capitalization ->
+           *[upper] Синхронізації
+            [lower] синхронізації
+        }
+        [dat] { $capitalization ->
+           *[upper] Синхронізації
+            [lower] синхронізації
+        }
+        [acc] { $capitalization ->
+           *[upper] Синхронізацію
+            [lower] синхронізацію
+        }
+        [abl] { $capitalization ->
+           *[upper] Синхронізацією
+            [lower] синхронізацією
+        }
     }
+
 # “Sync” can be localized, “Firefox” must be treated as a brand,
 # and kept in English.
 -sync-brand-name =
@@ -86,6 +103,7 @@ attribute-expression = { my_id.title }
         [nominative] Синхронизация Firefox
        *[genitive] Синхронизации Firefox
     }
+
 # “Account” can be localized, “Firefox” must be treated as a brand,
 # and kept in English.
 -fxaccount-brand-name =
