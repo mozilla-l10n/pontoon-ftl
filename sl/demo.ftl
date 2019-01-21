@@ -61,3 +61,11 @@ number-expression = { 5 }
 variant-expression = { -foo[bar] }
 # AttributeExpression
 attribute-expression = { my_id.title }
+
+# Term
+-term =
+    { $case ->
+       *[nominative] 1
+        [genitive] 2
+        [accusative] 3
+    }
