@@ -92,10 +92,7 @@ string-expression = { "" }
 # NumberExpression
 number-expression = { 5 }
 
-# VariantExpression
-variant-expression = { -foo[bar] }
-
-# AttributeExpression
+# MessageReference with attribute (was: AttributeExpression)
 attribute-expression = { my_id.title }
 
 # Nested selectors
