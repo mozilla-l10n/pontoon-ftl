@@ -1,38 +1,37 @@
 # Simple string
-title = O lokalizaciji12saasdasdasd3asd***
+title = O lokalizaciji1
 # Multiline string: press Shift + Enter to insert new line
 feedbackUninstallCopy =
-    Keep newlines 1Your participation
-    in Firefox Test Pilot means +++Your
-    participation in Firefox Test Pilot means 2a lot!
-    Please check out our other experiments,
-    3and stay tuned for more to come!
+    multi
+    line
+    adsasdd
 # Attributes: in original string
 emailOptInInput =
-    .placeholder = 123---
+    .placeholder = tukaj vnesite e-pošto3 :)
 # Attributes: access keys
 file-menu =
     .label = Datoteka
     .accesskey = D
-# Value and an attribute
-shotIndexNoExpirationSymbol = ∞
-    .title = Ta posnetek ne poteče
-# Plurals
-delete-all-message =
+# Plurals with custom values
+delete-all-message-special-cases =
     { $num ->
-        [1] #############a123+++
-        [two] d#############as+++
-        [few] ads#############+++
-       *[other] adsdas+++
+        [1] 23
+        [2] 343
+        [12] 434
+        [one]
+            Nid oedd yr e-bost hwn yn nhordata { $breachName }, ond fe'i welwyd mewn un arall.
+            Cofrestrwch am { $brand-fxa } i gael eich adroddiad llawn a rhybuddion am unrhyw dordata newydd.
+        [two] ewrwe
+        [few] erwer
+       *[other] ewrwer
     }
-# Soft Launch
-default-content-process-count =
-    .label = { $num } (privzeto)
+# NUMBER Built-in function
+today-is = Today is { DATETIME($date, month: "long", year: "numeric", day: "numeric") }r
 # PLATFORM() selector
 platform =
     { PLATFORM() ->
-        [win] Možnosti
-       *[other] Nastavitve
+       *[win] 1Možnosti
+        [other] 1Nastavitve
     }
 # PLATFORM() selector in attribute
 platform-attribute =
@@ -60,11 +59,11 @@ download-choose-folder =
         [genitive] 2
         [accusative] 3
     }
+# TermReference
+term-reference = Informacje o { -brand-name(case: "locative") }.
 # StringExpression
 string-expression = { "" }
 # NumberExpression
 number-expression = { 5 }
-# VariantExpression
-variant-expression = { -foo[bar] }
-# AttributeExpression
+# MessageReference with attribute (was: AttributeExpression)
 attribute-expression = { my_id.title }
