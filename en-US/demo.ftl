@@ -50,6 +50,14 @@ platform =
        *[other] Preferences
     }
 
+# NUMBER() selector
+number =
+    { NUMBER($var, type: "ordinal") ->
+        [1] first
+        [one] { $var }st
+       *[other] { $var }nd
+    }
+
 # PLATFORM() selector in attribute
 platform-attribute =
     .title = { PLATFORM() ->
