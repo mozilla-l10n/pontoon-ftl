@@ -5,7 +5,7 @@ title = About Localization
 feedbackUninstallCopy =
     Your participation in Firefox Test Pilot means
     a lot! Please check out our other experiments,
-    and stay tuned for more to come!
+    and stay tuned for more to come.
 
 # Attributes: in original string
 emailOptInInput =
