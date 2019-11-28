@@ -4,3 +4,9 @@ title = À propos de la traduction
 file-menu =
     .label = Fichier
     .accesskey = F
+# PLATFORM() selector
+platform =
+    { PLATFORM() ->
+        [win] Options
+       *[other] Préférences
+    }
