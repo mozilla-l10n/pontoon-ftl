@@ -10,3 +10,5 @@ platform =
         [win] Options
        *[other] Préférences
     }
+# Term
+-term = Terme
