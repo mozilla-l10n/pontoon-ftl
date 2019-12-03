@@ -16,6 +16,10 @@ file-menu =
     .label = File
     .accesskey = F
 
+other-file-menu =
+    .aria-label = {file-menu.label}
+    .accesskey = {file-menu.accesskey}
+
 # Value and an attribute
 shotIndexNoExpirationSymbol = ∞
     .title = This shot does not expire
