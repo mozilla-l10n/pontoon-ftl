@@ -13,11 +13,11 @@ platform-attribute =
 download-choose-folder =
     .label = { PLATFORM() ->
             [macosx] Scegli…
-           *[other] e
+           *[other] Sfoglia…
         }
     .accesskey = { PLATFORM() ->
-            [macosx] Sfoglia…
-           *[other] o
+            [macosx] e
+           *[other] c
         }
 # Multiple selectors
 selector-multi = { $num ->
