@@ -3,7 +3,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 do-not-track-description = Send websites a “Do Not Track” signal that you don’t want to be tracked
-do-not-track-learn-more = Learn more
+do-not-track-learn-more = Learn { -brand-name-firefox }
 do-not-track-option-default =
     .label = Only when using Tracking Protection
 do-not-track-option-always =
