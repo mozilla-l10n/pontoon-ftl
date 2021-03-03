@@ -851,3 +851,13 @@ certs-view =
 certs-devices =
     .label = Security Devices…
     .accesskey = D
+
+# Variables:
+# $count (number) - The number of elements being selected for removal.
+places-remove-bookmark =
+  .label =
+      { $count ->
+          [1] Remove Bookmark
+         *[other] Remove Bookmarks
+      }
+  .accesskey = e
