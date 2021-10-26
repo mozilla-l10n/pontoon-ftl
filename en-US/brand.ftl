@@ -15,3 +15,5 @@
 -brand-short-name = Firefox
 
 -fxaccount-brand-name = Firefox Account
+
+test = Test
